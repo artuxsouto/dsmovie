@@ -11,8 +11,6 @@ type Props = {
 
 function FormCard({ movieId }: Props) {
 
-    const navigate = useNavigate();
-
     const [movie, setMovie] = useState<Movie>();
 
     useEffect(() => {
@@ -21,10 +19,6 @@ function FormCard({ movieId }: Props) {
                 setMovie(response.data);
             });
     }, [movieId]);
-
-    const handlesubmit = (event: React.FormEvent<HTMLFormElement>)
-
-        event.preventDefault();
 
 
     return (
